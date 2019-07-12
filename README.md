@@ -24,7 +24,8 @@ e.g.
 Output is generated in several formats: 
 
   - `anita_revtex_authors.tex` and `anita_revtex_institutes.txt` for use with revtex journals
-  - `anita_elsarticle_authors.tex` txt` for use with elsevier journals
+  - `anita_elsarticle_authors.tex` ` for use with elsevier journals
+  -` anita_pos_authors.tex` for use with PoS 
   - `anita_authors.html` for web display, this is symlinked to index.html for gh-pages
   - `anita_authors.txt` for text
 
