@@ -1,0 +1,44 @@
+# ANITA Author List
+
+This is a centralized store for ANITA author lists. 
+
+There are two files used as input, authors.txt and institutions.txt
+
+Running make will then generate the other files (using a python script). 
+
+institutions.txt defines a mapping of institution id's to addresses in a |-separated manner, e.g., including an optional short name (used for PoS) 
+
+`UC | Dept. of Physics, Enrico Fermi Inst., Kavli Inst. for Cosmological Physics, Univ. of Chicago, Chicago, IL 60637. | University of Chicago` 
+
+
+The format of authors.txt is 
+
+
+`NAME  | INSTITUTION_ID1 | [ INSTIUTION_ID2 | etc.. ] `
+
+e.g. 
+
+`C.~Deaconu. | UC`
+
+
+Output is generated in several formats: 
+
+  - `anita_revtex_authors.tex` and `anita_revtex_institutes.txt` for use with revtex journals
+  - `anita_elsarticle_authors.tex` txt` for use with elsevier journals
+  - `anita_authors.html` for web display, this is symlinked to index.html for gh-pages
+  - `anita_authors.txt` for text
+
+TODO:
+  - `authors.xml` format for arxiv/inspirehep
+
+
+
+
+
+
+
+
+
+
+
+
