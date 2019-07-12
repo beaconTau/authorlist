@@ -133,8 +133,15 @@ for author in authors:
     f_authors_html.write(", \n"); 
   f_authors_html.write(author[0]); 
 
+  f_authors_html.write("<sup>"); 
+  first_aff = True
   for aff in author[1]:
-    f_authors_html.write("<sup><a href='#%s'>%d</a></sup>" % (aff, institute_numbers[aff]) ); 
+    if not first_aff:
+      f_authors_html.write(","); 
+    f_authors_html.write("<a href='#%s'>%d</a>" % (aff, institute_numbers[aff]) ); 
+
+    first_aff = False 
+  f_authors_html.write("</sup>"); 
 
   first = False
 
