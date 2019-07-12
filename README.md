@@ -18,7 +18,7 @@ The format of authors.txt is
 
 e.g. 
 
-`C.~Deaconu. | UC`
+`C. Deaconu. | UC`
 
 
 Output is generated in several formats: 
