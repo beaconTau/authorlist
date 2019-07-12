@@ -24,7 +24,7 @@ e.g.
 Output is generated in several formats: 
 
   - `beacon_revtex_authors.tex` and `beacon_revtex_institutes.txt` for use with revtex journals
-  - `beacon_elsarticle_authors.tex` ` for use with elsevier journals
+  - `beacon_elsarticle_authors.tex` for use with elsevier journals
   -` beacon_pos_authors.tex` for use with PoS 
   - `beacon_authors.html` for web display, this is used to generate an index.html that we can use for gh-pages (you should commit this if it changed!) 
   - `beacon_authors.txt` for text
