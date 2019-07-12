@@ -9,7 +9,7 @@ clean:
 	@rm -rf output 
 	@unlink index.html 
 
-$(tgts): authors.in institutes.in anita_author_tool.py | output 
+$ (tgts): authors.in institutes.in anita_author_tool.py | output 
 	@echo Running anita_author_tool.py
 	@./anita_author_tool.py output/anita_ 
 
@@ -17,7 +17,7 @@ output:
 	@mkdir -p $@
 
 index.html: output/anita_authors.html 
-	@echo "<html><head><title>ANITA Author List</title></head> <body><h1>ANITA Author List</h1><hr/>" > $@
+	@echo "<!DOCTYPE html><html><head><title>ANITA Author List</title></head> <body><h1>ANITA Author List</h1><hr/>" > $@
 	@cat $^ >> $@ 
 	@echo "</body></html>" >> $@
 	
