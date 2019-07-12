@@ -2,7 +2,7 @@
 
 This is a centralized store for ANITA author lists. 
 
-There are two files used as input, authors.txt and institutions.txt
+There are two files used as input, authors.in and institutions.in
 
 Running make will then generate the other files (using a python script). 
 
