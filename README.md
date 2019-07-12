@@ -23,11 +23,11 @@ e.g.
 
 Output is generated in several formats: 
 
-  - `anita_revtex_authors.tex` and `anita_revtex_institutes.txt` for use with revtex journals
-  - `anita_elsarticle_authors.tex` ` for use with elsevier journals
-  -` anita_pos_authors.tex` for use with PoS 
-  - `anita_authors.html` for web display, this is used to generate an index.html that we can use for gh-pages (you should commit this if it changed!) 
-  - `anita_authors.txt` for text
+  - `beacon_revtex_authors.tex` and `beacon_revtex_institutes.txt` for use with revtex journals
+  - `beacon_elsarticle_authors.tex` ` for use with elsevier journals
+  -` beacon_pos_authors.tex` for use with PoS 
+  - `beacon_authors.html` for web display, this is used to generate an index.html that we can use for gh-pages (you should commit this if it changed!) 
+  - `beacon_authors.txt` for text
 
 TODO:
   - `authors.xml` format for arxiv/inspirehep
