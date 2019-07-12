@@ -1,14 +1,15 @@
 #!/usr/bin/env python 
+#coding=utf-8
 
-## ANITA Author Tool to save time on author lists... 
+## BEACON Author Tool to save time on author lists... 
 #  Cosmin Deaconu <cozzyd@kicp.uchicago.edu> 
 #  apologies for the semicolons, it's a reflex at this point... 
 #  This is about as brute force as it gets :)
 
 import sys
 
-prefix = "anita_"  #prefix for all output files  (first argument overrideS) 
-collaboration = "ANITA"  # (second argument overrides) 
+prefix = "beacon_"  #prefix for all output files  (first argument overrideS) 
+collaboration = "BEACON"  # (second argument overrides) 
 
 
 if len(sys.argv) > 1: 
@@ -21,7 +22,7 @@ if len(sys.argv) > 2:
 ## may need to do more here! 
 def tex_escape(string): 
 
-  return string.replace("&","\&")
+  return string.replace("&","\&").replace("ã","\\~{a}").replace("ñ","\\~{n}").replace("ü","\\{u}")
 
 def html_escape(string):
 
@@ -161,7 +162,7 @@ f_revtex_authors.write("%% Collaboration author file for %s in revtex format\n" 
 f_revtex_authors.write("%% \\input this file in main body (make sure you also do the institutes file in the preamble!) \n\n" ) 
 
 for author in authors: 
-  name = author[0].replace(" ","~")
+  name = tex_escape(author[0]).replace(" ","~")
   f_revtex_authors.write(" \\author{%s}" % (name)) 
   if author[1] is not None: 
     for aff in author[1]: 
@@ -202,7 +203,7 @@ for key in sorted_institutes:
 f_elsarticle_authors.write("\n\n"); 
 
 for author in authors: 
-  name = author[0].replace(" ","~")
+  name = tex_escape(author[0]).replace(" ","~")
   affs = "" 
   for aff in author[1]: 
     if affs != "": 
@@ -224,7 +225,7 @@ f_pos_authors_tex.write("\\author{\n");
 f_pos_authors_tex.write("  (%s Collaboration)\n" % (collaboration)); 
 
 for author in authors: 
-  name = author[0].replace(" ","~")
+  name = tex_escape(author[0]).replace(" ","~")
   if not first: 
     f_pos_authors_tex.write(",\n"); 
   f_pos_authors_tex.write("  %s" % (name)); 

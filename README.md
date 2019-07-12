@@ -1,6 +1,6 @@
-# ANITA Author List
+# BEACON Author List
 
-This is a centralized store for ANITA author lists. 
+This is a centralized store for BEACON author lists. 
 
 There are two files used as input, authors.in and institutions.in
 
